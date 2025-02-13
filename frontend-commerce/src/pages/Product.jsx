@@ -330,14 +330,12 @@ const Product = () => {
                 { relatedProducts.length !== 0 ? (
                 <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-3 gap-4 gap-y-6'>
 
-
-
-                            relatedProducts.map((item, index) => (
-                                <ProductItem key={index} id={item._id} image={item.image} name={item.name}
-                                             price={item.price} bestseller={item.bestseller}/>
-                            ))
-
-
+                     {
+                        relatedProducts.map((item, index) => (
+                            <ProductItem key={index} id={item._id} image={item.image} name={item.name}
+                                         price={item.price} bestseller={item.bestseller}/>
+                        ))
+                    }
                 </div>
                 ) : <h1 className='mt-6 text-center text-blue-700 font-semibold'>
                     <svg className='text-center md-4 mr-auto ml-auto mb-6 ' width='40' height='40' xmlns="http://www.w3.org/2000/svg"
